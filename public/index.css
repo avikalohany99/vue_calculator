@@ -1,14 +1,43 @@
+body {
+  background: darkslategray;
+}
+
+#title {
+  background-color: orangered;
+  width: 371px;
+  height: 50px;
+}
+
+#screen {
+  background-color: black;
+  width: 371px;
+  height: 50px;
+  margin-top: -8px;
+  margin-right: -10px;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: chartreuse;
+  color: black;
   margin-top: 60px;
 }
 
-.character-card {
-  border: 2px solid #4fc08d;
+.calc-card {
+  border: 2px solid black;
+  height: 500px;
+  width: 400px;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 10px;
+}
+
+.center {
+  display: block;
+  margin: 550px;
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
