@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <h3>{{title}}</h3>
-    <div class="col-md-12">
-      <calculation />
+    <div class="col-md-6">
+      <div class="calc-card center">
+        <h4 id="title">
+          {{title}}
+        </h4>
+        <div id="screen">"Type here"
+        <calculation />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -14,7 +20,7 @@ export default {
   name: 'app',
   data() {
     return {
-      title: "Calculator",
+      title: "CALCULATOR",
     }
   },
   components: {
