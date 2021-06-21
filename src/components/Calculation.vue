@@ -45,7 +45,8 @@ export default {
       result1: null,
       result2: null,
       operator: null,
-      operatorClicked: false,
+      operatorClicked1: false,
+      operatorClicked2: false,
     };
   },
   methods: {
@@ -60,33 +61,33 @@ export default {
       this.current_calc = `${this.current_calc}${num}`;
     },
     add_num() {
-      this.operator = (a, b) => a + b;
+      this.operator = (num1, num2) => num1 + num2;
       this.append("+");
       this.result1 = this.current_calc;
       this.operatorClicked = true;
     },
     sub_num() {
-      this.operator = (a, b) => a - b;
+      this.operator = (num1, num2) => num1 - num2;
       this.append("-");
       this.result1 = this.current_calc;
       this.operatorClicked = true;
     },
     mul_num() {
-      this.operator = (a, b) => a * b;
+      this.operator = (num1, num2) => num1 * num2;
       this.append("*");
       this.result1 = this.current_calc;
       this.operatorClicked = true;
     },
     div_num() {
-      this.operator = (a, b) => a / b;
+      this.operator = (num1, num2) => num1 / num2;
       this.append("/");
       this.result1 = this.current_calc;
       this.operatorClicked = true;
     },
     eql() {
       this.current_calc = `${this.operator(
-        parseFloat(this.current_calc),
-        parseFloat(this.result1)
+        parseInt(this.result1),
+        parseInt(this.current_calc)
       )}`;
       this.result1 = null;
     },
